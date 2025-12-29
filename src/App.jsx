@@ -121,7 +121,10 @@ function App() {
 	
 	// Distance filter (in km)
 	const [maxDistance, setMaxDistance] = useState(10); // default 10km
-	
+	// Set window title
+	useEffect(() => {
+		document.title = 'RestoNow';
+	}, []);
 	// Dynamic step based on distance range
 	const getDistanceStep = (distance) => {
 		if (distance <= 2) return 0.1;
